@@ -143,7 +143,7 @@ class Network:
                 print(f"Node {n_idx + 1}: weights: {node.weights}, bias: {node.bias}")
 
 
-def main():
+def task_1() -> None:
     print("---Task 1---")
     nn_1 = Network(
         [
@@ -173,6 +173,9 @@ def main():
     outputs_1_2 = nn_1.forward(inputs_1)
     loss_1_2 = loss_fn_1.get_loss(outputs_1_2, expects_1)
     print(f"loss: {loss_1_2}")
+
+
+def task_2() -> None:
     print("---Task 2---")
     nn_2 = Network(
         [
@@ -201,6 +204,11 @@ def main():
     outputs_2_2 = nn_2.forward(inputs_2)
     loss_2_2 = loss_fn_2.get_loss(outputs_2_2, expects_2)
     print(f"loss: {loss_2_2}")
+
+
+def main():
+    task_1()
+    task_2()
 
 
 if __name__ == "__main__":
