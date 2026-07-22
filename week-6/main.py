@@ -78,7 +78,7 @@ def task2():
     stdev_fare = stdev([row[6] for row in raw_data])
     xs = [
         [
-            (3 - d[1]),  # p_class: convert 1, 2, 3 to 1, 0.5, 0
+            (3 - d[1]) / 2,  # p_class: convert 1, 2, 3 to 1, 0.5, 0
             d[2],  # sex: 0, 1
             ((d[3] - avg_age) / stdev_age if d[3] != 0 else 0),  # age
             1 if d[3] != 0 else 0,  # add flag for missing age
